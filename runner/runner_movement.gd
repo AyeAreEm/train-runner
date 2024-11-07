@@ -1,6 +1,5 @@
 extends Node3D
 
-# the floor is 12 on each side, not 12 in total
 const LEFT_LANE = -6.0
 const MIDDLE_LANE = 0.0
 const RIGHT_LANE = 6.0
@@ -11,6 +10,7 @@ const RIGHT_LANE = 6.0
 @export var distance_threshold = 0
 
 var current_distance_ran = 0
+var target_position = position  # Initialize target position
 
 func _ready():
 	pass
@@ -23,24 +23,28 @@ func handle_speed(delta):
 		speed_increase += rate_of_speed_increase
 		current_speed += speed_increase
 		position.z -= current_speed * delta
-
 	else:
 		position.z -= current_speed * delta
 
 func _process(delta):
 	handle_speed(delta)
 
-	var target_pos = position.x
+	# Determine target position based on input
 	if Input.is_action_pressed("move_left"):
-		if position.x == RIGHT_LANE:
-			target_pos = MIDDLE_LANE
+		if round(position.x) == RIGHT_LANE:
+			target_position.x = MIDDLE_LANE
+		elif round(position.x) == MIDDLE_LANE:
+			target_position.x = LEFT_LANE
 		else:
-			target_pos = LEFT_LANE
-		
+			target_position.x = target_position.x
+
 	if Input.is_action_pressed("move_right"):
-		if position.x == LEFT_LANE:
-			target_pos = MIDDLE_LANE
+		if round(position.x) == LEFT_LANE:
+			target_position.x = MIDDLE_LANE
+		elif round(position.x) == MIDDLE_LANE:
+			target_position.x = RIGHT_LANE
 		else:
-			target_pos = RIGHT_LANE
-			
-	position.x = lerp(position.x, target_pos, 0.1)
+			target_position.x = target_position.x
+
+	# Smoothly move towards the target position
+	position.x = lerp(position.x, target_position.x, 0.1)  # Adjust 0.1 for smoothness
