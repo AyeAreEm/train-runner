@@ -1,9 +1,9 @@
 extends Node3D
 
 # the floor is 12 on each side, not 12 in total
-const LEFT_LANE = -6
-const MIDDLE_LANE = 0
-const RIGHT_LANE = 6
+const LEFT_LANE = -6.0
+const MIDDLE_LANE = 0.0
+const RIGHT_LANE = 6.0
 
 @export var current_speed = 30.0
 @export var speed_increase = 0.5
@@ -30,14 +30,17 @@ func handle_speed(delta):
 func _process(delta):
 	handle_speed(delta)
 
-	if Input.is_action_just_pressed("move_left"):
+	var target_pos = position.x
+	if Input.is_action_pressed("move_left"):
 		if position.x == RIGHT_LANE:
-			position.x = MIDDLE_LANE
+			target_pos = MIDDLE_LANE
 		else:
-			position.x = LEFT_LANE
+			target_pos = LEFT_LANE
 		
-	if Input.is_action_just_pressed("move_right"):
+	if Input.is_action_pressed("move_right"):
 		if position.x == LEFT_LANE:
-			position.x = MIDDLE_LANE
+			target_pos = MIDDLE_LANE
 		else:
-			position.x = RIGHT_LANE
+			target_pos = RIGHT_LANE
+			
+	position.x = lerp(position.x, target_pos, 0.1)
