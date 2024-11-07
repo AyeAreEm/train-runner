@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cntchg2bihe8w"]
+[gd_scene load_steps=8 format=3 uid="uid://cntchg2bihe8w"]
 
 [ext_resource type="PackedScene" uid="uid://bicnb4wxdqig5" path="res://runner/runner.tscn" id="1_rcgh1"]
+[ext_resource type="PackedScene" uid="uid://imn2l5gqvcug" path="res://box_friend.tscn" id="2_4552w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tv1q2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,7 +31,7 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(12, 0, 0, 0, 8, 0, 0, 0, 80, 0, 0, -72)
+transform = Transform3D(12, 0, 0, 0, 8, 0, 0, 0, 160, 0, 0, -158)
 mesh = SubResource("PlaneMesh_xj767")
 skeleton = NodePath("")
 
@@ -40,3 +41,78 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_t7tlq")
 
 [node name="runner" parent="." instance=ExtResource("1_rcgh1")]
+
+[node name="box friends" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -8)
+
+[node name="box friend" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="box friend2" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.919)
+
+[node name="box friend3" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -8.419)
+
+[node name="box friend4" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -11.919)
+
+[node name="box friend5" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.419)
+
+[node name="box friend6" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -20.419)
+
+[node name="box friend7" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="box friend8" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -27.919)
+
+[node name="box friend9" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -32.419)
+
+[node name="box friend10" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -35.919)
+
+[node name="box friend11" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218596, 9.53674e-07, -40.4185)
+
+[node name="box friend12" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -44.419)
+
+[node name="box friend13" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49)
+
+[node name="box friend14" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -52.919)
+
+[node name="box friend15" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -57.419)
+
+[node name="box friend16" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -60.919)
+
+[node name="box friend17" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -65.419)
+
+[node name="box friend18" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -69.419)
+
+[node name="box friend19" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -73)
+
+[node name="box friend20" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -76.919)
+
+[node name="box friend21" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -81.419)
+
+[node name="box friend22" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -84.919)
+
+[node name="box friend23" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218596, 9.53674e-07, -89.4185)
+
+[node name="box friend24" parent="box friends" instance=ExtResource("2_4552w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -93.419)
