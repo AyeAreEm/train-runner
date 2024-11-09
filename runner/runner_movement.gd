@@ -5,8 +5,8 @@ const MIDDLE_LANE = 0.0
 const RIGHT_LANE = 6.0
 
 @export var jump_height = 5.0
-@export var jump_time_apex = 0.5
-@export var jump_time_fall = 0.5
+@export var jump_time_apex = 0.3
+@export var jump_time_fall = 0.3
 
 @onready var jump_velocity = (2.0 * jump_height) / jump_time_apex
 @onready var jump_gravity = (-2.0 * jump_height) / (jump_time_apex * jump_time_apex)
@@ -61,3 +61,7 @@ func _process(delta):
 	position.z = lerp(position.z, target_position.z, 0.1)
 
 	move_and_slide()
+
+func _on_teleport_to_start_body_entered(body):
+	global_position = global_transform.origin
+
