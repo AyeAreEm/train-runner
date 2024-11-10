@@ -1,243 +1,218 @@
-[gd_scene load_steps=10 format=3 uid="uid://cntchg2bihe8w"]
+[gd_scene load_steps=6 format=3 uid="uid://1prbfk8j21ne"]
 
-[ext_resource type="PackedScene" uid="uid://bicnb4wxdqig5" path="res://runner/runner.tscn" id="1_rcgh1"]
-[ext_resource type="PackedScene" uid="uid://dl6uby6wd8nfp" path="res://objects/train_no_slope.tscn" id="2_3moxb"]
-[ext_resource type="PackedScene" uid="uid://do7nm1thyuoo2" path="res://objects/train_with_slope.tscn" id="3_tfeis"]
-[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board.tscn" id="4_4dh2d"]
+[ext_resource type="PackedScene" uid="uid://dl6uby6wd8nfp" path="res://objects/train_no_slope.tscn" id="1_53e8w"]
+[ext_resource type="PackedScene" uid="uid://do7nm1thyuoo2" path="res://objects/train_with_slope.tscn" id="2_y3pgw"]
+[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board.tscn" id="3_uyj7e"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tv1q2"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_4aomp"]
-sky_material = SubResource("ProceduralSkyMaterial_tv1q2")
-
-[sub_resource type="Environment" id="Environment_cwj15"]
-background_mode = 2
-sky = SubResource("Sky_4aomp")
-tonemap_mode = 2
-glow_enabled = true
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_xj767"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_1td28"]
 size = Vector2(24, 320)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_shi15"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_64ct6"]
 size = Vector3(24, 1, 320)
 
-[node name="Node3D" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_cwj15")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
+[node name="TestPreset" type="Node3D"]
 
 [node name="floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -158)
-mesh = SubResource("PlaneMesh_xj767")
+mesh = SubResource("PlaneMesh_1td28")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floor"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_shi15")
-
-[node name="runner" parent="." instance=ExtResource("1_rcgh1")]
+shape = SubResource("BoxShape3D_64ct6")
 
 [node name="trains" type="Node3D" parent="."]
 
-[node name="train no slope" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -8.4166)
 
-[node name="train no slope2" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope2" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -8.4166)
 
-[node name="train no slope3" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope3" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -15.4166)
 
-[node name="train no slope4" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope4" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -22.4166)
 
-[node name="train no slope6" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope6" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -22.4166)
 
-[node name="train no slope7" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope7" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -29.4166)
 
-[node name="train no slope8" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope8" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -36.4166)
 
-[node name="train no slope9" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope9" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -43.4166)
 
-[node name="train no slope10" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope10" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -62.4166)
 
-[node name="train no slope11" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope11" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -69.4166)
 
-[node name="train no slope13" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope13" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -76.4166)
 
-[node name="train no slope14" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope14" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -83.4166)
 
-[node name="train no slope15" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope15" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -90.4166)
 
-[node name="train no slope16" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope16" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -115.417)
 
-[node name="train no slope17" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope17" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -122.417)
 
-[node name="train no slope18" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope18" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -129.417)
 
-[node name="train no slope19" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope19" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -129.417)
 
-[node name="train no slope20" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope20" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -122.417)
 
-[node name="train no slope21" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope21" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -115.417)
 
-[node name="train no slope22" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope22" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -136.417)
 
-[node name="train no slope23" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope23" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -143.417)
 
-[node name="train no slope24" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope24" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -143.417)
 
-[node name="train no slope25" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope25" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -150.417)
 
-[node name="train no slope26" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope26" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -157.417)
 
-[node name="train no slope27" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope27" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -164.417)
 
-[node name="train no slope28" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope28" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -172.417)
 
-[node name="train no slope29" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope29" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -168.417)
 
-[node name="train no slope30" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope30" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -175.417)
 
-[node name="train no slope31" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope31" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -182.417)
 
-[node name="train no slope32" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope32" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -189.417)
 
-[node name="train no slope33" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope33" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -197.417)
 
-[node name="train no slope34" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope34" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -181.417)
 
-[node name="train no slope35" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope35" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -188.417)
 
-[node name="train no slope36" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope36" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -195.417)
 
-[node name="train no slope37" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope37" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -202.417)
 
-[node name="train no slope38" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope38" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -210.417)
 
-[node name="train no slope12" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope12" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.75571, -3.8147e-06, -76.4166)
 
-[node name="train no slope5" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope5" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -29.4166)
 
-[node name="train with slope" parent="trains" instance=ExtResource("3_tfeis")]
+[node name="train with slope" parent="trains" instance=ExtResource("2_y3pgw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.33713, -0.00012207, -69.2499)
 
-[node name="train with slope2" parent="trains" instance=ExtResource("3_tfeis")]
+[node name="train with slope2" parent="trains" instance=ExtResource("2_y3pgw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.337126, -0.00012207, -108.25)
 
-[node name="train no slope39" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope39" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -254.417)
 
-[node name="train no slope40" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope40" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -261.417)
 
-[node name="train no slope41" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope41" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.24429, -3.8147e-06, -268.417)
 
-[node name="train with slope3" parent="trains" instance=ExtResource("3_tfeis")]
+[node name="train with slope3" parent="trains" instance=ExtResource("2_y3pgw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.33713, -0.00012207, -247.25)
 
-[node name="train no slope42" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope42" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -271.417)
 
-[node name="train no slope43" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope43" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -278.417)
 
-[node name="train no slope44" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope44" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.244287, -3.8147e-06, -285.417)
 
-[node name="train with slope4" parent="trains" instance=ExtResource("3_tfeis")]
+[node name="train with slope4" parent="trains" instance=ExtResource("2_y3pgw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.337126, -0.00012207, -264.25)
 
-[node name="train no slope45" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope45" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -294.417)
 
-[node name="train no slope46" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope46" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -301.417)
 
-[node name="train no slope47" parent="trains" instance=ExtResource("2_3moxb")]
+[node name="train no slope47" parent="trains" instance=ExtResource("1_53e8w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.75571, -3.8147e-06, -308.417)
 
-[node name="train with slope5" parent="trains" instance=ExtResource("3_tfeis")]
+[node name="train with slope5" parent="trains" instance=ExtResource("2_y3pgw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.66287, -0.00012207, -287.25)
 
 [node name="sign boards" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.99556, 5, -223.95)
 
-[node name="sign board" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -209.95, 0, 7.13097)
 
-[node name="sign board2" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board2" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -169.929, 0, 1.50527)
 
-[node name="sign board3" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board3" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.023, 0, 13.092)
 
-[node name="sign board4" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board4" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.511, 0, 13.092)
 
-[node name="sign board5" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board5" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.7331, 0, 13.092)
 
-[node name="sign board6" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board6" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.3806, 0, 13.092)
 
-[node name="sign board7" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board7" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6543, 0, -1.90735e-06)
 
-[node name="sign board8" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board8" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8069, 0, 4.76837e-07)
 
-[node name="sign board9" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board9" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4163, 0, 4.76837e-07)
 
-[node name="sign board10" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board10" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 
-[node name="sign board11" parent="sign boards" instance=ExtResource("4_4dh2d")]
+[node name="sign board11" parent="sign boards" instance=ExtResource("3_uyj7e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[editable path="runner"]
