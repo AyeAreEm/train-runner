@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cntchg2bihe8w"]
+[gd_scene load_steps=10 format=3 uid="uid://cntchg2bihe8w"]
 
 [ext_resource type="PackedScene" uid="uid://bicnb4wxdqig5" path="res://runner/runner.tscn" id="1_rcgh1"]
 [ext_resource type="PackedScene" uid="uid://dl6uby6wd8nfp" path="res://train_no_slope.tscn" id="2_3moxb"]
 [ext_resource type="PackedScene" uid="uid://do7nm1thyuoo2" path="res://train_with_slope.tscn" id="3_tfeis"]
+[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://sign_board.tscn" id="4_4dh2d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tv1q2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -202,5 +203,41 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.755
 
 [node name="train with slope5" parent="trains" instance=ExtResource("3_tfeis")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.66287, -0.00012207, -287.25)
+
+[node name="sign boards" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.99556, 5, -223.95)
+
+[node name="sign board" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -209.95, 0, 7.13097)
+
+[node name="sign board2" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -169.929, 0, 1.50527)
+
+[node name="sign board3" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.023, 0, 13.092)
+
+[node name="sign board4" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.511, 0, 13.092)
+
+[node name="sign board5" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.7331, 0, 13.092)
+
+[node name="sign board6" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.3806, 0, 13.092)
+
+[node name="sign board7" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6543, 0, -1.90735e-06)
+
+[node name="sign board8" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8069, 0, 4.76837e-07)
+
+[node name="sign board9" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4163, 0, 4.76837e-07)
+
+[node name="sign board10" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="sign board11" parent="sign boards" instance=ExtResource("4_4dh2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [editable path="runner"]

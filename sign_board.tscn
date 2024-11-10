@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://jcbq41ect5i2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0602n"]
+albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_aqig7"]
+material = SubResource("StandardMaterial3D_0602n")
+size = Vector3(0.2, 6, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gi18"]
+albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uiv2n"]
+material = SubResource("StandardMaterial3D_3gi18")
+size = Vector3(0.2, 2, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5525c"]
+size = Vector3(0.2, 2, 4)
+
+[node name="sign board" type="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 5, 0)
+
+[node name="poleR" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -2)
+mesh = SubResource("BoxMesh_aqig7")
+skeleton = NodePath("../..")
+
+[node name="poleL" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2)
+mesh = SubResource("BoxMesh_aqig7")
+skeleton = NodePath("../..")
+
+[node name="board" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_uiv2n")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_5525c")
+
+[node name="Node3D" type="Node3D" parent="."]
