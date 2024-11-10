@@ -20,8 +20,8 @@ glow_enabled = true
 [sub_resource type="PlaneMesh" id="PlaneMesh_xj767"]
 size = Vector2(24, 320)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wosgl"]
-points = PackedVector3Array(12, 0, 160, -12, 0, 160, 12, 0, -160, -12, 0, -160)
+[sub_resource type="BoxShape3D" id="BoxShape3D_shi15"]
+size = Vector3(24, 1, 320)
 
 [node name="Node3D" type="Node3D"]
 
@@ -40,7 +40,8 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="floor"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_wosgl")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_shi15")
 
 [node name="runner" parent="." instance=ExtResource("1_rcgh1")]
 
