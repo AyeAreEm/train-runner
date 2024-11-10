@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cntchg2bihe8w"]
 
 [ext_resource type="PackedScene" uid="uid://bicnb4wxdqig5" path="res://runner/runner.tscn" id="1_rcgh1"]
-[ext_resource type="PackedScene" uid="uid://dl6uby6wd8nfp" path="res://train_no_slope.tscn" id="2_3moxb"]
-[ext_resource type="PackedScene" uid="uid://do7nm1thyuoo2" path="res://train_with_slope.tscn" id="3_tfeis"]
-[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://sign_board.tscn" id="4_4dh2d"]
+[ext_resource type="PackedScene" uid="uid://dl6uby6wd8nfp" path="res://objects/train_no_slope.tscn" id="2_3moxb"]
+[ext_resource type="PackedScene" uid="uid://do7nm1thyuoo2" path="res://objects/train_with_slope.tscn" id="3_tfeis"]
+[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board.tscn" id="4_4dh2d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tv1q2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
