@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj11ht5pn83lq"]
+
+[ext_resource type="PackedScene" uid="uid://bg4rfhr3f1fyx" path="res://train_from_pack/traincarfrompacknotop.glb" id="1_sva6r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w6m0c"]
+size = Vector3(4, 4.64056, 23)
+
+[node name="trainfrompack" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00340271, 2.68425, -0.00882721)
+
+[node name="traincarfrompacknotop" parent="." instance=ExtResource("1_sva6r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.68425, 11.4927)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.303802, 0)
+shape = SubResource("BoxShape3D_w6m0c")
