@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmuoucnl6rplp"]
+
+[ext_resource type="PackedScene" uid="uid://c3c55g56q18x7" path="res://basicasscoin.glb" id="1_fod84"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="basicasscoin" parent="." instance=ExtResource("1_fod84")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

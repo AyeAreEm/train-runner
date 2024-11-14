@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://jcbq41ect5i2"]
 
-[ext_resource type="Texture2D" uid="uid://qowp6onye7w6" path="res://ksiinthethickofit.jpg" id="1_dqm0m"]
+[ext_resource type="Texture2D" uid="uid://qowp6onye7w6" path="res://ksiinthethickofit.jpg" id="1_aqsq8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0602n"]
 albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
@@ -17,7 +17,7 @@ material = SubResource("StandardMaterial3D_3gi18")
 size = Vector3(0.2, 4, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4i18"]
-albedo_texture = ExtResource("1_dqm0m")
+albedo_texture = ExtResource("1_aqsq8")
 emission_energy_multiplier = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ymc0l"]
@@ -27,7 +27,7 @@ size = Vector2(20, 4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_5525c"]
 size = Vector3(0.2, 4, 20)
 
-[node name="sign board" type="StaticBody3D"]
+[node name="sign board big" type="StaticBody3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 3, 0)
 
 [node name="poleR" type="MeshInstance3D" parent="."]

@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cntchg2bihe8w"]
+[gd_scene load_steps=10 format=3 uid="uid://cntchg2bihe8w"]
 
+[ext_resource type="PackedScene" uid="uid://4v7bu3w13x55" path="res://objects/generic_floor_320.tscn" id="1_h6scj"]
 [ext_resource type="PackedScene" uid="uid://bicnb4wxdqig5" path="res://runner/runner.tscn" id="1_rcgh1"]
 [ext_resource type="PackedScene" uid="uid://bj11ht5pn83lq" path="res://objects/trainfrompack.tscn" id="2_gty68"]
-[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board.tscn" id="4_4dh2d"]
+[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board_big.tscn" id="4_4dh2d"]
+[ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="5_40bey"]
+[ext_resource type="PackedScene" uid="uid://bmuoucnl6rplp" path="res://objects/basicasscoin.tscn" id="6_s2bhx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tv1q2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -17,12 +20,6 @@ sky = SubResource("Sky_4aomp")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_xj767"]
-size = Vector2(24, 320)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_shi15"]
-size = Vector3(24, 1, 320)
-
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -32,16 +29,7 @@ environment = SubResource("Environment_cwj15")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -158)
-mesh = SubResource("PlaneMesh_xj767")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_shi15")
+[node name="floor" parent="." instance=ExtResource("1_h6scj")]
 
 [node name="runner" parent="." instance=ExtResource("1_rcgh1")]
 
@@ -103,5 +91,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, -66.569)
 
 [node name="sign board" parent="." instance=ExtResource("4_4dh2d")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0175581, 0.640563, -26.6944)
+
+[node name="sign board small" parent="." instance=ExtResource("5_40bey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28462, 0, -96.5079)
+
+[node name="sign board small2" parent="." instance=ExtResource("5_40bey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71538, 0, -163.508)
+
+[node name="sign board small3" parent="." instance=ExtResource("5_40bey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.284624, 0, -171.508)
+
+[node name="sign board small4" parent="." instance=ExtResource("5_40bey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71538, 0, -180.508)
+
+[node name="sign board small5" parent="." instance=ExtResource("5_40bey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.284624, 0, -188.508)
+
+[node name="Node3D" parent="." instance=ExtResource("6_s2bhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0202875, 5.03514, -14.4321)
 
 [editable path="runner"]

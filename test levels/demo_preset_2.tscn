@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://4v7pu0roe4cb"]
+
+[ext_resource type="PackedScene" uid="uid://4v7bu3w13x55" path="res://objects/generic_floor_320.tscn" id="1_thtjd"]
+[ext_resource type="PackedScene" uid="uid://bj11ht5pn83lq" path="res://objects/trainfrompack.tscn" id="2_4vfca"]
+[ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="3_6pb2j"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -157.111)
+
+[node name="floor" parent="." instance=ExtResource("1_thtjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815866, 0, -0.837152)
+
+[node name="trains" type="Node3D" parent="."]
+
+[node name="trainfrompack" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 144.527)
+
+[node name="trainfrompack2" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 120.527)
+
+[node name="trainfrompack3" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 96.527)
+
+[node name="trainfrompack4" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 72.527)
+
+[node name="trainfrompack18" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 72.527)
+
+[node name="trainfrompack19" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 96.527)
+
+[node name="trainfrompack5" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 48.527)
+
+[node name="trainfrompack6" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 24.527)
+
+[node name="trainfrompack7" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 0.526993)
+
+[node name="trainfrompack8" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, -23.473)
+
+[node name="trainfrompack9" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, -47.473)
+
+[node name="trainfrompack10" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 24.527)
+
+[node name="trainfrompack11" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 0.526993)
+
+[node name="trainfrompack12" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -23.473)
+
+[node name="trainfrompack13" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -47.473)
+
+[node name="trainfrompack14" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -71.473)
+
+[node name="trainfrompack15" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -95.473)
+
+[node name="trainfrompack20" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -95.473)
+
+[node name="trainfrompack21" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, -95.473)
+
+[node name="trainfrompack16" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -119.473)
+
+[node name="trainfrompack17" parent="trains" instance=ExtResource("2_4vfca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -143.473)
+
+[node name="sign board small" parent="." instance=ExtResource("3_6pb2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99198, 0, 85.0205)
+
+[node name="sign board small2" parent="." instance=ExtResource("3_6pb2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99198, 0, 47.0205)
+
+[node name="sign board small3" parent="." instance=ExtResource("3_6pb2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00801659, 0, -20.9795)

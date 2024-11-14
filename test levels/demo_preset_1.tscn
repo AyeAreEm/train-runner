@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqf5kco2aanre"]
+
+[ext_resource type="PackedScene" uid="uid://bj11ht5pn83lq" path="res://objects/trainfrompack.tscn" id="1_grnti"]
+[ext_resource type="PackedScene" uid="uid://4v7bu3w13x55" path="res://objects/generic_floor_320.tscn" id="2_137th"]
+[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board_big.tscn" id="3_ajphm"]
+[ext_resource type="PackedScene" uid="uid://bicnb4wxdqig5" path="res://runner/runner.tscn" id="4_dqftu"]
+[ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="5_asxbx"]
+
+[node name="demo_preset_1" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -155)
+
+[node name="trains" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="trainfrompack" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 144)
+
+[node name="trainfrompack2" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 120)
+
+[node name="trainfrompack3" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 96)
+
+[node name="trainfrompack4" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 72)
+
+[node name="trainfrompack5" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 48)
+
+[node name="trainfrompack10" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 120)
+
+[node name="trainfrompack11" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 96)
+
+[node name="trainfrompack12" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 72)
+
+[node name="trainfrompack13" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 48)
+
+[node name="trainfrompack15" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 96)
+
+[node name="trainfrompack16" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 72)
+
+[node name="trainfrompack17" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 48)
+
+[node name="trainfrompack18" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 24)
+
+[node name="trainfrompack19" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, 0)
+
+[node name="trainfrompack20" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, 0)
+
+[node name="trainfrompack21" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, -24)
+
+[node name="trainfrompack22" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, -48)
+
+[node name="trainfrompack23" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, -72)
+
+[node name="trainfrompack24" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.624, -96)
+
+[node name="trainfrompack25" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, -96)
+
+[node name="trainfrompack26" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, -120)
+
+[node name="trainfrompack27" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.624, -144)
+
+[node name="trainfrompack6" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 24)
+
+[node name="trainfrompack7" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 0)
+
+[node name="trainfrompack8" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -24)
+
+[node name="trainfrompack9" parent="trains" instance=ExtResource("1_grnti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -48)
+
+[node name="floor" parent="." instance=ExtResource("2_137th")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="sign board" parent="." instance=ExtResource("3_ajphm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.340786, 0.640701, 40.5284)
+
+[node name="runner" parent="." instance=ExtResource("4_dqftu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 155)
+
+[node name="sign board small" parent="." instance=ExtResource("5_asxbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70663, 0, -37.7769)
+
+[node name="sign board small2" parent="." instance=ExtResource("5_asxbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.29337, 0, -83.7769)

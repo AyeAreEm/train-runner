@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dl6uby6wd8nfp" path="res://objects/train_no_slope.tscn" id="1_53e8w"]
 [ext_resource type="PackedScene" uid="uid://do7nm1thyuoo2" path="res://objects/train_with_slope.tscn" id="2_y3pgw"]
-[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board.tscn" id="3_uyj7e"]
+[ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board_big.tscn" id="3_uyj7e"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1td28"]
 size = Vector2(24, 320)
