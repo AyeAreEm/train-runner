@@ -1,19 +1,25 @@
 extends Node
 
-var test_preset = preload("res://test levels/test_preset.tscn")
 @onready var runner = $runner
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var preset1 = preload("res://test levels/demo_preset_1.tscn")
+var preset2 = preload("res://test levels/demo_preset_2.tscn")
+var presets = [preset1, preset2]
 
+var rng = RandomNumberGenerator.new()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+const FLOOR_LENGTH = -320.0
+var floors_count = 1
+
+func load_random_preset():
+	print("loading random preset")
+	print(floors_count * FLOOR_LENGTH)
+	var preset = presets[rng.randi_range(0, 1)].instantiate()
+	preset.position.z = FLOOR_LENGTH * floors_count
+	add_child(preset)
+	
+	floors_count += 1
 
 func _on_area_3d_body_entered(body):
 	if body.get_parent().name == "runner":
-		var next_preset = test_preset.instantiate()
-		next_preset.position.z = -320.0
-		add_child(next_preset)
+		load_random_preset()
