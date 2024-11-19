@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://4v7pu0roe4cb"]
+[gd_scene load_steps=7 format=3 uid="uid://4v7pu0roe4cb"]
 
 [ext_resource type="Script" path="res://test levels/demo_preset_2.gd" id="1_6kfpx"]
 [ext_resource type="PackedScene" uid="uid://4v7bu3w13x55" path="res://objects/generic_floor_320.tscn" id="1_thtjd"]
 [ext_resource type="PackedScene" uid="uid://bj11ht5pn83lq" path="res://objects/trainfrompack.tscn" id="2_4vfca"]
 [ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="3_6pb2j"]
+[ext_resource type="PackedScene" uid="uid://c1pwk45mj3exg" path="res://objects/buildingssurround.glb" id="5_bg1tf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dpqty"]
 size = Vector3(24, 14.7061, 4)
@@ -94,5 +95,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99198, 0, 0)
 
 [node name="sign board small3" parent="." instance=ExtResource("3_6pb2j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00801659, 0, 0)
+
+[node name="buildingssurround" parent="." instance=ExtResource("5_bg1tf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.519136, 0, -0.452797)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
