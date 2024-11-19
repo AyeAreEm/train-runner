@@ -18,7 +18,7 @@ offset_left = 1063.0
 offset_top = 2.0
 offset_right = 1150.0
 offset_bottom = 25.0
-text = "hello world"
+text = "0"
 horizontal_alignment = 2
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
