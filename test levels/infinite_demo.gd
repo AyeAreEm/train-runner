@@ -14,7 +14,6 @@ const FLOOR_LENGTH = -320.0
 var floors_count = 1
 
 func load_random_preset():
-	print(loaded_presets)
 	var preset = presets[rng.randi_range(0, 1)].instantiate()
 	preset.position.z = FLOOR_LENGTH * floors_count
 	add_child(preset)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqf5kco2aanre"]
 
+[ext_resource type="Script" path="res://test levels/load_preset_from_preset.gd" id="1_04h2j"]
 [ext_resource type="PackedScene" uid="uid://bj11ht5pn83lq" path="res://objects/trainfrompack.tscn" id="1_grnti"]
-[ext_resource type="Script" path="res://test levels/demo_preset_1.gd" id="1_kowyc"]
 [ext_resource type="PackedScene" uid="uid://4v7bu3w13x55" path="res://objects/generic_floor_320.tscn" id="2_137th"]
 [ext_resource type="PackedScene" uid="uid://jcbq41ect5i2" path="res://objects/sign_board_big.tscn" id="3_ajphm"]
 [ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="5_asxbx"]
@@ -11,7 +11,7 @@
 size = Vector3(24, 13.6241, 4)
 
 [node name="demo_preset_1" type="Node3D"]
-script = ExtResource("1_kowyc")
+script = ExtResource("1_04h2j")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76794, 146.787)
