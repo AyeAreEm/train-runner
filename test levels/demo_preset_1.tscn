@@ -12,6 +12,7 @@ size = Vector3(24, 13.6241, 4)
 
 [node name="demo_preset_1" type="Node3D"]
 script = ExtResource("1_04h2j")
+metadata/scene_length = 320.0
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76794, 146.787)
