@@ -6,21 +6,20 @@
 [ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="3_6pb2j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dpqty"]
-size = Vector3(24, 4, 4)
+size = Vector3(24, 14.7061, 4)
 
 [node name="demo_preset_2" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -157.111)
 script = ExtResource("1_6kfpx")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 159.297)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1.18161)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0304, -1.18161)
 shape = SubResource("BoxShape3D_dpqty")
 
 [node name="floor" parent="." instance=ExtResource("1_thtjd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815866, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="trains" type="Node3D" parent="."]
 

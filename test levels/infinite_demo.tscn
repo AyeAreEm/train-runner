@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://test levels/infinite_demo.gd" id="1_onhdy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3ygky"]
-size = Vector3(24, 4, 4)
+size = Vector3(24, 9.75305, 4)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m6pwo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -32,6 +32,7 @@ script = ExtResource("1_onhdy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.87653, 0)
 shape = SubResource("BoxShape3D_3ygky")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -44,7 +45,6 @@ shadow_enabled = true
 [node name="runner" parent="." instance=ExtResource("1_4obtt")]
 
 [node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -158)
 mesh = SubResource("PlaneMesh_d3u2e")
 skeleton = NodePath("")
 

@@ -7,21 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://m5tdbhypaglu" path="res://objects/sign_board_small.tscn" id="5_asxbx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hfa5m"]
-size = Vector3(24, 4, 4)
+size = Vector3(24, 13.6241, 4)
 
 [node name="demo_preset_1" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -155)
 script = ExtResource("1_kowyc")
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76794, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.405289)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.81207, 0.405289)
 shape = SubResource("BoxShape3D_hfa5m")
 
 [node name="trains" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -158)
 
 [node name="trainfrompack" parent="trains" instance=ExtResource("1_grnti")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, 144)
@@ -102,14 +100,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -24)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.624, -48)
 
 [node name="floor" parent="." instance=ExtResource("2_137th")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="sign board" parent="." instance=ExtResource("3_ajphm")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.340786, 0.640701, -158)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.641, 0)
 
 [node name="sign board small" parent="." instance=ExtResource("5_asxbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70663, 0, -158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.5924)
 
 [node name="sign board small2" parent="." instance=ExtResource("5_asxbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.29337, 0, -158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.29337, 0, -93.367)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
