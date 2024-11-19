@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var hud = $"../Label"
+
 const LEFT_LANE = -6.0
 const MIDDLE_LANE = 0.0
 const RIGHT_LANE = 6.0
@@ -21,6 +23,9 @@ var target_position = position
 func _ready():
 	pass
 
+func get_gravity() -> float:
+	return jump_gravity if velocity.y > 0.0 else fall_gravity
+
 func handle_speed(delta):
 	if round(abs(position.z)) as int % distance_threshold == 0:
 		speed += 0.2
@@ -34,13 +39,7 @@ func handle_jump(delta):
 	if not is_on_floor():
 		velocity.y += get_gravity() * delta
 		
-func get_gravity() -> float:
-	return jump_gravity if velocity.y > 0.0 else fall_gravity
-
-func _process(delta):
-	handle_speed(delta)
-	handle_jump(delta)
-	
+func handle_moving_lanes():
 	if Input.is_action_pressed("move_left"):
 		if round(position.x) == RIGHT_LANE:
 			target_position.x = MIDDLE_LANE
@@ -59,9 +58,18 @@ func _process(delta):
 
 	position.x = lerp(position.x, target_position.x, 0.1)
 	position.z = lerp(position.z, target_position.z, 0.1)
+	
+func update_hud():
+	hud.text = str((position.z as int) * -1)
+
+func _process(delta):
+	handle_speed(delta)
+	handle_jump(delta)
+	handle_moving_lanes()
+	
+	update_hud()
 
 	move_and_slide()
 
 func _on_teleport_to_start_body_entered(body):
 	global_position = global_transform.origin
-

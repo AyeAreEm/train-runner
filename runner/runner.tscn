@@ -13,6 +13,14 @@ data = PackedVector3Array(0, 1, 0, 0, 1, 0, 0, 0.9924, -0.0868, 0, 1, 0, -0.0085
 
 [node name="runner" type="Node3D"]
 
+[node name="Label" type="Label" parent="."]
+offset_left = 1063.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 25.0
+text = "hello world"
+horizontal_alignment = 2
+
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_w82mj")
